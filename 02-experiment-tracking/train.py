@@ -10,6 +10,7 @@ import mlflow
 mlflow.set_tracking_uri("sqlite:///mlflow.db")
 mlflow.set_experiment("week-02-homework")
 
+mlflow.sklearn.autolog()
 
 def load_pickle(filename: str):
     with open(filename, "rb") as f_in:
